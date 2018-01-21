@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+    <TemplateURL>https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/couchpotato.xml</TemplateURL>
+    <Beta>False</Beta>
+    <Category>Downloaders: MediaApp:Video</Category>
+    <Name>binhex-couchpotato</Name>
+    <Description>
+        Docker container for MP4 Conversion/Tagging Automation Scripts.  Includes ffmpeg and python on alpine linux.  Automatically convert media files downloaded by various programs to mp4 files, and tags them with the appropriate metadata from theTVDB or TMDB.[br]Source located https://github.com/brunnels/sickbeard_mp4_automator[br][br]
+        [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
+        [b]/config[/b] This is for a customized autoProcess.ini configuration file.  If you leave it blank the default will be utilized [br]
+        [b]/incoming[/b] This is the folder containing files to be converted[br]
+        [b]/outgoing[/b] This is where the script will output converted files
+    </Description>
+    <Overview>
+        Docker container for MP4 Conversion/Tagging Automation Scripts.  Includes ffmpeg and python on alpine linux.  Automatically convert media files downloaded by various programs to mp4 files, and tags them with the appropriate metadata from theTVDB or TMDB.
+    </Overview>
+    <Support></Support>
+    <Registry>https://hub.docker.com/r/kraven/docker-mp4a/</Registry>
+    <GitHub>https://github.com/brunnels/docker-mp4a</GitHub>
+    <Repository>brunnels/docker-mp4a</Repository>
+    <Project>https://github.com/brunnels/sickbeard_mp4_automator</Project>
+    <Deprecated>False</Deprecated>
+    <BindTime>true</BindTime>
+    <Privileged>false</Privileged>
+    <Environment>
+        <Variable>
+            <Name>UMASK</Name>
+            <Value>000</Value>
+        </Variable>
+        <Variable>
+            <Name>PUID</Name>
+            <Value>99</Value>
+        </Variable>
+        <Variable>
+            <Name>PGID</Name>
+            <Value>100</Value>
+        </Variable>
+    </Environment>
+    <Data>
+        <Volume>
+            <HostDir></HostDir>
+            <ContainerDir>/usr/share/mp4_automator/autoProcess.ini</ContainerDir>
+            <Mode>rw</Mode>
+        </Volume>
+        <Volume>
+            <HostDir></HostDir>
+            <ContainerDir>/incoming</ContainerDir>
+            <Mode>rw</Mode>
+        </Volume>
+        <Volume>
+            <HostDir></HostDir>
+            <ContainerDir>/outgoing</ContainerDir>
+            <Mode>rw</Mode>
+        </Volume>
+    </Data>
+    <Banner></Banner>
+    <Icon>https://raw.githubusercontent.com/brunnels/docker-templates/master/brunnels/images/docker-mp4a-icon.png</Icon>
+    <DonateText></DonateText>
+    <DonateLink></DonateLink>
+    <DonateImg></DonateImg>
+    <ExtraParams></ExtraParams>
+</Containers>
