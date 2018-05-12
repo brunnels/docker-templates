@@ -1,0 +1,110 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Container">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="Name"/>
+        <xs:element type="xs:string" name="Overview"/>
+        <xs:element type="xs:string" name="Registry"/>
+        <xs:element type="xs:string" name="Repository"/>
+        <xs:element type="xs:string" name="Privileged"/>
+        <xs:element type="xs:string" name="Support"/>
+        <xs:element type="xs:string" name="Network"/>
+        <xs:element type="xs:string" name="WebUI"/>
+        <xs:element type="xs:string" name="Icon"/>
+        <xs:element type="xs:string" name="Category"/>
+        <xs:element type="xs:string" name="Author"/>
+        <xs:element type="xs:string" name="DockerHubName"/>
+        <xs:element type="xs:string" name="Beta"/>
+        <xs:element type="xs:string" name="Changes"/>
+        <xs:element type="xs:string" name="Date"/>
+        <xs:element type="xs:string" name="RepoName"/>
+        <xs:element type="xs:string" name="Project"/>
+        <xs:element type="xs:string" name="ID"/>
+        <xs:element type="xs:string" name="Base"/>
+        <xs:element type="xs:string" name="BaseImage"/>
+        <xs:element type="xs:string" name="SortAuthor"/>
+        <xs:element type="xs:string" name="SortName"/>
+        <xs:element type="xs:string" name="License"/>
+        <xs:element type="xs:string" name="Plugin"/>
+        <xs:element type="xs:string" name="PluginURL"/>
+        <xs:element type="xs:string" name="MinVer"/>
+        <xs:element type="xs:string" name="MaxVer"/>
+        <xs:element type="xs:string" name="Description"/>
+        <xs:element type="xs:string" name="downloads"/>
+        <xs:element type="xs:string" name="stars"/>
+        <xs:element type="xs:string" name="Announcement"/>
+        <xs:element type="xs:string" name="IconWeb"/>
+        <xs:element type="xs:string" name="DonateText"/>
+        <xs:element type="xs:string" name="DonateImg"/>
+        <xs:element type="xs:string" name="DonateLink"/>
+        <xs:element type="xs:string" name="PopupDescription"/>
+        <xs:element type="xs:string" name="ModeratorComment"/>
+        <xs:element type="xs:string" name="Compatible"/>
+        <xs:element type="xs:string" name="Forum"/>
+        <xs:element type="xs:string" name="Profile"/>
+        <xs:element type="xs:string" name="Private"/>
+        <xs:element type="xs:string" name="NoInstall"/>
+        <xs:element type="xs:string" name="Blacklist"/>      
+        <xs:element type="xs:string" name="Deprecated"/>
+        <xs:element type="xs:string" name="DeprecatedMaxVer"/>
+        <xs:element type="xs:string" name="WebPageURL"/>
+        <xs:element type="xs:string" name="Logo"/>
+        <xs:element type="xs:string" name="Path"/>
+        <xs:element type="xs:string" name="MyPath"/>
+        <xs:element type="xs:string" name="BranchID"/>
+        <xs:element type="xs:string" name="BranchDefault"/>
+        <xs:element type="xs:string" name="Uninstall"/>
+        <xs:element type="xs:string" name="Removable"/>                
+        <xs:element type="xs:string" name="BindTime"/>        
+        <xs:element type="xs:string" name="Version"/>        
+        <xs:element type="xs:string" name="MyIP"/>
+        <xs:element type="xs:string" name="TemplateURL"/>
+        <xs:element type="xs:string" name="PostArgs"/>
+        <xs:element type="xs:string" name="DateInstalled"/>
+        <xs:element type="xs:string" name="Banner"/>
+        <xs:element type="xs:string" name="ExtraParams"/>
+        <xs:element name="Branch">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="Tag"/>
+              <xs:element type="xs:string" name="TagDescription"/>
+              <xs:element type="xs:string" name="Repository"/>
+              <xs:element name="Environment">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Variable">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="Name"/>
+                          <xs:element type="xs:short" name="Value"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Config" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:simpleContent>
+              <xs:extension base="xs:string">
+                <xs:attribute type="xs:string" name="Name" use="optional"/>
+                <xs:attribute type="xs:string" name="Target" use="optional"/>
+                <xs:attribute type="xs:string" name="Default" use="optional"/>
+                <xs:attribute type="xs:string" name="Mode" use="optional"/>
+                <xs:attribute type="xs:string" name="Description" use="optional"/>
+                <xs:attribute type="xs:string" name="Type" use="optional"/>
+                <xs:attribute type="xs:string" name="Display" use="optional"/>
+                <xs:attribute type="xs:string" name="Required" use="optional"/>
+                <xs:attribute type="xs:string" name="Mask" use="optional"/>
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute type="xs:byte" name="version"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
